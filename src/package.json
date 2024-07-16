@@ -12,7 +12,7 @@
   "scripts": {
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "build-minify-css": "node-sass --output-style compressed --include-path scss scss/style.scss css/style.min.css",
-    "copy-directories": "rsync -avh archive css fonts img js weather-icons ../dist/skins/neowx-material/",
+    "copy-directories": "rsync -avh archive css fonts img js weather-icons ../dist/skins/neowx-material/ && rsync -avh ../bin ../dist/ ",
     "copy-files": "rsync -avh *.tmpl *.inc manifest.json skin.conf ../dist/skins/neowx-material/",
     "create-build": "mkdir -p ../dist/skins/neowx-material/",
     "delete-build": "rm -Rf ../dist/skins/neowx-material/",
